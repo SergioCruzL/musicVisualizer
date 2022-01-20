@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+#canvas1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#pantalla1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#audio1{
+    width: 50%;
+    margin: 50px auto;
+    display: block;
+    z-index: 4;
+}
+
+#fileupload{
+    position: absolute;
+    top: 150px;
+    left: 900px;
+    color: white;
+    z-index: 100;
+}
+
+#snail{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    z-index: 1;
+}
+
+#snail path{
+    stroke-dasharray: 1950;
+    stroke-dashoffset: 0;
+    animation: animatePath 5s ease-in-out infinite;
+}
+@keyframes animatePath{
+    0%{
+        stroke-dasharray: 1000;
+    }
+    50%{
+        stroke-dasharray: 0;
+    }
+    100%{
+        stroke-dasharray: 1000;
+    }
+}
